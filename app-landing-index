@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite TKD App | Your Taekwon-Do Training Companion</title>
+<meta name="description" content="The official Elite Scotland Taekwon-Do training app. Patterns, theory, terminology, flexibility and competition prep — built by Master Dutton, 8th Dan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C8102E;
+    --red-bright: #E8192E;
+    --navy: #0A1628;
+    --navy-mid: #0D1F3C;
+    --navy-light: #142447;
+    --white: #FFFFFF;
+    --off-white: #E8E8E8;
+    --gray: #8899AA;
+
+    /* Grading ladder colours — white belt to black belt */
+    --belt-white: #F4F1EA;
+    --belt-yellow: #F2C230;
+    --belt-green: #2E8B57;
+    --belt-blue: #1C5FAD;
+    --belt-red: #C8102E;
+    --belt-black: #15151A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy); color: var(--white);
+    font-family: 'Barlow', sans-serif; overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--red-bright); outline-offset: 3px; }
+
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 1.75rem; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,22,40,0.92);
+    border-bottom: 1px solid rgba(200,16,46,0.25);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px; padding: 0 1.75rem;
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem;
+    letter-spacing: 0.1em; text-decoration: none; color: var(--white);
+  }
+  .nav-logo span { color: var(--red); }
+  .nav-cta {
+    font-family: 'Oswald', sans-serif; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none;
+    color: var(--off-white); border: 1px solid rgba(255,255,255,0.18);
+    padding: 0.55rem 1.1rem; border-radius: 3px; transition: 0.2s;
+  }
+  .nav-cta:hover { border-color: var(--red-bright); color: var(--red-bright); }
+
+  /* ─── HERO ─── */
+  #hero {
+    position: relative; padding: 9.5rem 0 5rem;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(200,16,46,0.22) 0%, transparent 55%),
+      var(--navy);
+    overflow: hidden;
+  }
+  .hero-eyebrow {
+    font-family: 'Oswald', sans-serif; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase; color: var(--red-bright);
+    margin-bottom: 1.1rem;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif; font-weight: 400;
+    font-size: clamp(2.6rem, 8vw, 5.4rem); line-height: 1.05;
+    letter-spacing: 0.02em; max-width: 14ch;
+  }
+  .hero-title .red { color: var(--red); }
+  .hero-sub {
+    margin: 1.4rem auto 0; max-width: 38ch; font-size: 1.08rem;
+    line-height: 1.7; color: var(--off-white); opacity: 0.85;
+  }
+
+  /* Belt knot signature graphic */
+  .belt-knot { width: min(280px, 70vw); margin: 3rem auto 0; }
+
+  .hero-btns {
+    margin-top: 2.6rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+    padding: 1rem 1.9rem; border-radius: 4px; transition: 0.2s;
+  }
+  .btn-red {
+    background: var(--red); color: var(--white);
+    box-shadow: 0 6px 24px rgba(200,16,46,0.45);
+  }
+  .btn-red:hover { background: var(--red-bright); transform: translateY(-2px); }
+  .btn-ghost {
+    border: 1px solid rgba(255,255,255,0.2); color: var(--off-white);
+  }
+  .btn-ghost:hover { border-color: var(--red-bright); color: var(--red-bright); }
+
+  .hero-note {
+    margin-top: 1.1rem; font-size: 0.8rem; color: var(--gray);
+    font-family: 'Oswald', sans-serif; letter-spacing: 0.08em;
+  }
+
+  /* ─── SECTION SHELL ─── */
+  section { padding: 5.5rem 0; }
+  .section-label {
+    font-family: 'Oswald', sans-serif; font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase; color: var(--red-bright);
+    margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif; font-weight: 400;
+    font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.1; letter-spacing: 0.02em;
+  }
+  .section-title .red { color: var(--red); }
+  .section-intro {
+    max-width: 46ch; color: var(--off-white); opacity: 0.82;
+    font-size: 1rem; line-height: 1.75; margin-top: 1rem;
+  }
+
+  /* ─── GRADING LADDER (signature feature list) ─── */
+  #ladder { background: var(--navy-mid); }
+  .ladder-head { margin-bottom: 3rem; }
+  .ladder {
+    position: relative; display: flex; flex-direction: column; gap: 0;
+    border-left: 4px solid rgba(255,255,255,0.06); margin-left: 0.6rem;
+  }
+  .rung {
+    position: relative; display: grid; grid-template-columns: 84px 1fr;
+    gap: 1.5rem; align-items: flex-start; padding: 1.9rem 0 1.9rem 1.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .rung:last-child { border-bottom: none; }
+  .rung-belt {
+    position: relative; height: 100%; display: flex; align-items: center; justify-content: center;
+  }
+  .rung-belt .swatch {
+    width: 14px; height: 14px; border-radius: 50%;
+    box-shadow: 0 0 0 5px var(--navy-mid), 0 0 0 6px rgba(255,255,255,0.08);
+    margin-left: -28px;
+  }
+  .rung-label {
+    font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray);
+    margin-bottom: 0.4rem;
+  }
+  .rung h3 {
+    font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 1.5rem;
+    letter-spacing: 0.03em; margin-bottom: 0.4rem;
+  }
+  .rung p { color: var(--off-white); opacity: 0.78; font-size: 0.94rem; line-height: 1.65; max-width: 46ch; }
+
+  .swatch-white  { background: var(--belt-white); }
+  .swatch-yellow { background: var(--belt-yellow); }
+  .swatch-green  { background: var(--belt-green); }
+  .swatch-blue   { background: var(--belt-blue); }
+  .swatch-red    { background: var(--belt-red); }
+  .swatch-black  { background: var(--belt-black); box-shadow: 0 0 0 5px var(--navy-mid), 0 0 0 6px var(--red); }
+
+  /* ─── ASK MASTER DUTTON STRIP ─── */
+  #ask {
+    background: linear-gradient(135deg, rgba(200,16,46,0.14) 0%, rgba(200,16,46,0.03) 100%);
+    border-top: 1px solid rgba(200,16,46,0.25);
+    border-bottom: 1px solid rgba(200,16,46,0.25);
+  }
+  .ask-grid {
+    display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+  }
+  .ask-icon { font-size: 2.6rem; flex-shrink: 0; }
+  .ask-grid h3 {
+    font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 1.7rem;
+    letter-spacing: 0.03em; margin-bottom: 0.4rem;
+  }
+  .ask-grid p { color: var(--off-white); opacity: 0.85; font-size: 0.95rem; line-height: 1.65; max-width: 56ch; }
+
+  /* ─── PRICING ─── */
+  #pricing { text-align: center; }
+  .pricing-card {
+    max-width: 460px; margin: 2.75rem auto 0;
+    background: var(--navy-mid); border: 1px solid rgba(200,16,46,0.25);
+    border-radius: 10px; padding: 2.75rem 2.25rem;
+  }
+  .price-trial {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(200,16,46,0.15); border: 1px solid rgba(200,16,46,0.35);
+    border-radius: 20px; padding: 0.4rem 1.1rem; margin-bottom: 1.6rem;
+    font-family: 'Oswald', sans-serif; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--off-white);
+  }
+  .price-trial b { color: var(--red); }
+  .price-amount {
+    font-family: 'Bebas Neue', sans-serif; font-weight: 400; line-height: 1;
+    display: flex; align-items: baseline; justify-content: center; gap: 0.3rem; margin-bottom: 0.4rem;
+  }
+  .price-amount .currency { font-size: 1.6rem; }
+  .price-amount .num { font-size: 5rem; color: var(--red); letter-spacing: -0.02em; }
+  .price-amount .per { font-size: 1rem; color: var(--gray); align-self: center; font-family: 'Barlow', sans-serif; }
+  .price-features {
+    list-style: none; text-align: left; max-width: 280px; margin: 1.8rem auto;
+    display: flex; flex-direction: column; gap: 0.65rem;
+  }
+  .price-features li {
+    display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.92rem; color: var(--off-white);
+  }
+  .price-features li::before { content: '✓'; color: var(--red); font-weight: 700; }
+  .price-fine { font-size: 0.78rem; color: var(--gray); margin-top: 1rem; }
+
+  /* ─── FOOTER ─── */
+  footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 3rem 0 2.5rem; }
+  .footer-grid {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.1em;
+  }
+  .footer-logo span { color: var(--red); }
+  .footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+  .footer-links a {
+    font-family: 'Oswald', sans-serif; font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+    color: var(--gray); transition: 0.2s;
+  }
+  .footer-links a:hover { color: var(--red-bright); }
+  .footer-fine { margin-top: 2rem; font-size: 0.78rem; color: var(--gray); text-align: center; }
+
+  /* ─── REVEAL ANIMATION ─── */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 640px) {
+    .rung { grid-template-columns: 32px 1fr; gap: 1rem; padding-left: 0.5rem; }
+    .rung-belt .swatch { margin-left: -22px; }
+    .ladder { margin-left: 0.2rem; }
+    .footer-grid { flex-direction: column; text-align: center; }
+    .ask-grid { text-align: center; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://elitetkd.uk" class="nav-logo">ELITE <span>TKD</span> APP</a>
+  <a href="https://app.elitetkd.uk" class="nav-cta">Open App</a>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">ITF Taekwon-Do · Scotland · Member App</div>
+    <h1 class="hero-title">TRAIN ANYWHERE.<br><span class="red">GRADE</span> WITH CONFIDENCE.</h1>
+    <p class="hero-sub">The official Elite Scotland Taekwon-Do app — patterns, theory, terminology and training tools built by Master Dutton, 8th Dan, to back up every class.</p>
+
+    <!-- Belt knot signature graphic -->
+    <svg class="belt-knot" viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylised Taekwon-Do belt knot in the colours of the grading ladder">
+      <!-- belt band -->
+      <path d="M10 70 C70 30, 210 30, 270 70 L270 90 C210 130, 70 130, 10 90 Z" fill="var(--navy-mid)" stroke="rgba(255,255,255,0.08)"/>
+      <!-- knot -->
+      <path d="M120 58 C120 40, 160 40, 160 58 C160 76, 130 70, 130 86 C130 102, 165 100, 165 84"
+            stroke="var(--belt-white)" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <path d="M120 102 C120 120, 160 120, 160 102 C160 84, 130 90, 130 74 C130 58, 165 60, 165 76"
+            stroke="var(--red)" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <!-- tails -->
+      <rect x="58" y="73" width="56" height="14" rx="3" fill="var(--belt-yellow)"/>
+      <rect x="58" y="91" width="56" height="14" rx="3" fill="var(--belt-green)"/>
+      <rect x="166" y="73" width="56" height="14" rx="3" fill="var(--belt-blue)"/>
+      <rect x="166" y="91" width="56" height="14" rx="3" fill="var(--belt-black)"/>
+    </svg>
+
+    <div class="hero-btns">
+      <a href="https://portal.elitetkd.uk/pricing-plans/plans-pricing" class="btn btn-red">📱 Start 7-Day Free Trial</a>
+      <a href="https://app.elitetkd.uk" class="btn btn-ghost">Already a member? Open the app</a>
+    </div>
+    <div class="hero-note">£3.99/month after your free trial · cancel anytime · iOS &amp; Android coming soon</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ GRADING LADDER ═══════════════════════════════ -->
+<section id="ladder">
+  <div class="wrap">
+    <div class="ladder-head reveal">
+      <div class="section-label">What's Inside</div>
+      <h2 class="section-title">EVERYTHING UNLOCKS<br>FROM <span class="red">WHITE BELT</span></h2>
+      <p class="section-intro">The app grows with you. Whatever grade you're training for, it's all here from day one — laid out in the order you'll actually use it as you progress.</p>
+    </div>
+
+    <div class="ladder">
+      <div class="rung reveal">
+        <div class="rung-belt"><span class="swatch swatch-white"></span></div>
+        <div>
+          <div class="rung-label">Foundations</div>
+          <h3>Patterns Library</h3>
+          <p>Every ITF pattern (Tul) from white belt to black belt, broken down step by step on video with Master Dutton.</p>
+        </div>
+      </div>
+
+      <div class="rung reveal">
+        <div class="rung-belt"><span class="swatch swatch-yellow"></span></div>
+        <div>
+          <div class="rung-label">Grading Ready</div>
+          <h3>Theory &amp; Grading Guide</h3>
+          <p>The full theory syllabus for every belt level — history, philosophy and rules, organised so you know exactly what's coming next.</p>
+        </div>
+      </div>
+
+      <div class="rung reveal">
+        <div class="rung-belt"><span class="swatch swatch-green"></span></div>
+        <div>
+          <div class="rung-label">Command of the Floor</div>
+          <h3>Korean Terminology</h3>
+          <p>Every command, count and technique name you'll hear in class — with audio, so you walk in already knowing the language.</p>
+        </div>
+      </div>
+
+      <div class="rung reveal">
+        <div class="rung-belt"><span class="swatch swatch-blue"></span></div>
+        <div>
+          <div class="rung-label">Sharpen Technique</div>
+          <h3>Video Tutorials</h3>
+          <p>Kicks, stances, hand techniques and self-defence combinations — watch back as often as you need, anytime.</p>
+        </div>
+      </div>
+
+      <div class="rung reveal">
+        <div class="rung-belt"><span class="swatch swatch-red"></span></div>
+        <div>
+          <div class="rung-label">Build Capacity</div>
+          <h3>Flexibility Training</h3>
+          <p>Structured stretching routines to improve kicking height and keep you training injury-free, season after season.</p>
+        </div>
+      </div>
+
+      <div class="rung reveal">
+        <div class="rung-belt"><span class="swatch swatch-black"></span></div>
+        <div>
+          <div class="rung-label">Peak Performance</div>
+          <h3>Competition Prep</h3>
+          <p>Event calendars, entry forms and training plans to help you peak at exactly the right moment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ ASK MASTER DUTTON ═══════════════════════════════ -->
+<section id="ask">
+  <div class="wrap ask-grid reveal">
+    <div class="ask-icon">🥋</div>
+    <div>
+      <h3>Ask Master Dutton</h3>
+      <p>Got a question about a technique, a pattern, or your training? Submit it directly through the app and get a personal answer from Master Dutton, 8th Dan Black Belt.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ PRICING ═══════════════════════════════ -->
+<section id="pricing">
+  <div class="wrap reveal">
+    <div class="section-label">Get Started</div>
+    <h2 class="section-title">ONE PLAN. <span class="red">EVERYTHING</span> INCLUDED.</h2>
+
+    <div class="pricing-card">
+      <div class="price-trial"><b>★</b> 7-Day Free Trial</div>
+      <div class="price-amount">
+        <span class="currency">£</span>
+        <span class="num">3.99</span>
+        <span class="per">/ month</span>
+      </div>
+      <ul class="price-features">
+        <li>Full access to patterns, theory &amp; terminology</li>
+        <li>Video tutorials and flexibility programmes</li>
+        <li>Ask Master Dutton, 1-to-1</li>
+        <li>Works on iOS &amp; Android</li>
+        <li>Cancel anytime</li>
+      </ul>
+      <a href="https://portal.elitetkd.uk/pricing-plans/plans-pricing" class="btn btn-red" style="width:100%;justify-content:center;">📱 Start Free Trial — Subscribe Now</a>
+      <p class="price-fine">7 days free, then £3.99/month. Cancel anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+<section id="about" style="padding:3.5rem 0;">
+  <div class="wrap reveal" style="max-width:640px;">
+    <div class="section-label" style="color:var(--gray);">The Instructor</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.6rem;letter-spacing:0.03em;margin-bottom:0.9rem;">
+      MASTER STUART DUTTON
+      <span style="display:block;margin-top:0.3rem;font-family:'Oswald',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.2em;color:var(--gray);">7TH DEGREE BLACK BELT</span>
+    </h2>
+    <p style="color:var(--off-white);opacity:0.78;font-size:0.92rem;line-height:1.75;">
+      Over 30 years in ITF Taekwon-Do — a national-level competitor, instructor to students of every age, and author of several Taekwon-Do books covering patterns, sparring psychology, flexibility and training. The Elite TKD App brings that lifetime of knowledge into one place, giving every student structured learning anytime, anywhere.
+    </p>
+    <a href="https://www.amazon.co.uk/stores/author/B0BGHSH7D7" target="_blank" style="display:inline-block;margin-top:1rem;font-family:'Oswald',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--red-bright);text-decoration:none;">View Master Dutton's Books →</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">ELITE <span>TKD</span> APP</div>
+      <div class="footer-links">
+        <a href="https://elitetkd.uk">Main Site</a>
+        <a href="https://app.elitetkd.uk">Open App</a>
+        <a href="https://portal.elitetkd.uk/my-subscriptions">Manage Subscription</a>
+        <a href="mailto:elitetkdscot@gmail.com">Contact</a>
+      </div>
+    </div>
+    <p class="footer-fine">© 2025 Elite Scotland Taekwon-Do. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Scroll-reveal for sections
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+
+</body>
+</html>
