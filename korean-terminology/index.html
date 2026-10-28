@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ITF Taekwon-Do Korean Terminology | Commands & Glossary | TKD APP</title>
+
+  <meta name="description" content="Learn essential ITF Taekwon-Do Korean terminology, commands, stances, techniques and training words. A practical glossary for students preparing for class and grading." />
+
+  <link rel="canonical" href="https://tkdapp.uk/korean-terminology/" />
+
+  <meta property="og:title" content="ITF Taekwon-Do Korean Terminology | TKD APP" />
+  <meta property="og:description" content="Learn essential Korean commands and terminology used in ITF Taekwon-Do." />
+  <meta property="og:url" content="https://tkdapp.uk/korean-terminology/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black: #0A0A0A;
+      --card: #111111;
+      --navy: #0D1B3E;
+      --gold: #C9A84C;
+      --gold-light: #E2C06A;
+      --white: #FFFFFF;
+      --grey: #A0A0A0;
+      --border: rgba(201,168,76,0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    nav {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,10,10,.96);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--gold);
+      font-size: 24px;
+      letter-spacing: .12em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      padding: 110px 24px 90px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top, rgba(13,27,62,.85), transparent 60%),
+        var(--black);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(50px, 8vw, 88px);
+      line-height: 1;
+      letter-spacing: .04em;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: auto;
+      color: rgba(255,255,255,.72);
+      font-size: 18px;
+    }
+
+    section {
+      padding: 80px 24px;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(36px, 5vw, 54px);
+      letter-spacing: .04em;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 850px;
+      text-align: center;
+      margin: auto;
+    }
+
+    .intro p {
+      color: rgba(255,255,255,.7);
+      margin-bottom: 18px;
+    }
+
+    .terms-section {
+      background: var(--navy);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 42px;
+    }
+
+    .section-heading p {
+      color: rgba(255,255,255,.65);
+    }
+
+    .term-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .term-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      transition: .2s ease;
+    }
+
+    .term-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .korean {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--gold);
+      font-size: 25px;
+      letter-spacing: .06em;
+      margin-bottom: 4px;
+    }
+
+    .english {
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .category {
+      padding: 80px 24px;
+    }
+
+    .category.alt {
+      background: #0D0D0D;
+    }
+
+    .word-list {
+      max-width: 850px;
+      margin: 35px auto 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .word-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(201,168,76,.12);
+      gap: 20px;
+    }
+
+    .word-row:last-child {
+      border-bottom: 0;
+    }
+
+    .word-row:nth-child(even) {
+      background: rgba(255,255,255,.025);
+    }
+
+    .word-korean {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .word-english {
+      color: rgba(255,255,255,.75);
+    }
+
+    .note {
+      max-width: 850px;
+      margin: 30px auto 0;
+      background: rgba(201,168,76,.08);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 22px;
+      color: rgba(255,255,255,.72);
+      font-size: 14px;
+    }
+
+    .training {
+      text-align: center;
+    }
+
+    .training p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      color: rgba(255,255,255,.7);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      font-weight: 700;
+      padding: 15px 30px;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: var(--gold-light);
+    }
+
+    footer {
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--grey);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--gold);
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding-top: 80px;
+      }
+
+      .word-row {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-inner">
+
+    <a class="brand" href="/">TKD APP</a>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/patterns/">Patterns</a>
+      <a href="/korean-terminology/">Terminology</a>
+      <a href="https://app.elitetkd.uk">Open App</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<header class="hero">
+  <div class="container">
+
+    <div class="eyebrow">ITF Taekwon-Do Training Resource</div>
+
+    <h1>
+      Korean<br>
+      <span>Terminology</span>
+    </h1>
+
+    <p>
+      Learn the Korean words and commands used in ITF Taekwon-Do.
+      Understanding terminology helps students follow instruction,
+      prepare for gradings and develop a deeper understanding of the art.
+    </p>
+
+  </div>
+</header>
+
+
+<section>
+  <div class="container intro">
+
+    <h2>Why Learn Korean Terminology?</h2>
+
+    <p>
+      Korean terminology is an important part of Taekwon-Do training.
+      Students hear Korean words throughout classes, patterns,
+      gradings and competitions.
+    </p>
+
+    <p>
+      Learning the language used for commands, techniques and training
+      helps students understand instruction more quickly and builds
+      confidence as they progress through the grades.
+    </p>
+
+    <p>
+      This guide covers useful terminology students are likely to hear
+      regularly. The TKD APP contains further theory, pattern and
+      grading resources for continued study between classes.
+    </p>
+
+  </div>
+</section>
+
+
+<section class="terms-section">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Essential Commands</div>
+      <h2>Commands Used In Training</h2>
+
+      <p>
+        These are some of the most recognisable commands used during
+        Taekwon-Do training and competition.
+      </p>
+    </div>
+
+    <div class="term-grid">
+
+      <div class="term-card">
+        <div class="korean">Cha Ryot</div>
+        <div class="english">Attention</div>
+      </div>
+
+      <div class="term-card">
+        <div class="korean">Kyong Rye</div>
+        <div class="english">Bow</div>
+      </div>
+
+      <div class="term-card">
+        <div class="korean">Jun Bi</div>
+        <div class="english">Ready</div>
+      </div>
+
+      <div class="term-card">
+        <div class="korean">Si Jak</div>
+        <div class="english">Begin</div>
+      </div>
+
+      <div class="term-card">
+        <div class="korean">Ge Sok</div>
+        <div class="english">Continue</div>
+      </div>
+
+      <div class="term-card">
+        <div class="korean">Gu Man</div>
+        <div class="english">End / Stop</div>
+      </div>
+
+      <div class="term-card">
+        <div class="korean">He Chot</div>
+        <div class="english">Separate</div>
+      </div>
+
+      <div class="term-card">
+        <div class="korean">Ju Ui</div>
+        <div class="english">Warning</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="category">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Basic Training Words</div>
+      <h2>Common Taekwon-Do Terms</h2>
+    </div>
+
+    <div class="word-list">
+
+      <div class="word-row">
+        <div class="word-korean">Dojang</div>
+        <div class="word-english">Training hall</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Dobok</div>
+        <div class="word-english">Training suit / uniform</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Tul</div>
+        <div class="word-english">Pattern</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Matsogi</div>
+        <div class="word-english">Sparring</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Hosinsul</div>
+        <div class="word-english">Self-defence</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Sogi</div>
+        <div class="word-english">Stance</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Jirugi</div>
+        <div class="word-english">Punching technique</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Chagi</div>
+        <div class="word-english">Kick / kicking technique</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Makgi</div>
+        <div class="word-english">Blocking technique</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="category alt">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Useful Vocabulary</div>
+      <h2>Directions & Body Levels</h2>
+
+      <p>
+        These words appear frequently when Taekwon-Do techniques
+        and movements are described.
+      </p>
+    </div>
+
+    <div class="word-list">
+
+      <div class="word-row">
+        <div class="word-korean">Ap</div>
+        <div class="word-english">Front</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Yop</div>
+        <div class="word-english">Side</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Dwit</div>
+        <div class="word-english">Back / rear</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Najunde</div>
+        <div class="word-english">Low section</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Kaunde</div>
+        <div class="word-english">Middle section</div>
+      </div>
+
+      <div class="word-row">
+        <div class="word-korean">Nopunde</div>
+        <div class="word-english">High section</div>
+      </div>
+
+    </div>
+
+    <div class="note">
+      Romanisation and spacing of Korean terminology can vary between
+      organisations, instructors and reference material. Students should
+      always follow the terminology taught by their instructor and association.
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="training">
+
+  <div class="container">
+
+    <div class="eyebrow">Study Between Classes</div>
+
+    <h2>Learn More With TKD APP</h2>
+
+    <p>
+      TKD APP combines Korean terminology with all 24 ITF patterns,
+      grading theory, quizzes, techniques, flexibility work and training
+      resources. Built by Master Dutton, 7th Dan, with more than
+      30 years of Taekwon-Do experience.
+    </p>
+
+    <a class="btn" href="https://app.elitetkd.uk">
+      Open The TKD App
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    © 2026 TKD APP by Master Dutton ·
+    <a href="/">Home</a> ·
+    <a href="/patterns/">Patterns</a> ·
+    <a href="/korean-terminology/">Korean Terminology</a>
+  </p>
+
+</footer>
+
+</body>
+</html>
