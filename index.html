@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>ITF Taekwon-Do Training App | Patterns, Theory & Quizzes | TKD APP</title>
-  <meta name="description" content="Your growing ITF Taekwon-Do training companion. Explore pattern videos, quizzes, workouts and grading resources, with new lessons added regularly. By Master Dutton, 7th Dan." />
+  <meta name="description" content="Learn ITF Taekwon-Do anywhere with patterns, theory, grading guides, workouts, terminology and quizzes. Explore the Android training app coming to Google Play." />
  <link rel="canonical" href="https://tkdapp.uk/" />
   <meta property="og:title" content="TKD APP – Train Anywhere. Learn Anytime." />
-  <meta property="og:description" content="The complete ITF Taekwon-Do training companion. Patterns, grading, theory and more." />
+  <meta property="og:description" content="ITF Taekwon-Do patterns, grading theory, workouts, terminology and quizzes. Android app coming to Google Play." />
   <meta property="og:url" content="https://tkdapp.uk" />
 
   <!-- Google Fonts -->
@@ -596,14 +596,7 @@
       border-radius: 20px;
       white-space: nowrap;
     }
-    .pricing-trial {
-      font-family: var(--font-display);
-      font-size: 42px;
-      letter-spacing: 0.05em;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-    .pricing-trial-label {
+.pricing-trial-label {
       font-size: 13px;
       font-weight: 600;
       letter-spacing: 0.12em;
@@ -788,36 +781,48 @@
     @media (prefers-reduced-motion: reduce) {
       .feature-card, .btn { transition: none; }
     }
+
+    /* ─── UPDATED GOOGLE PLAY / MOBILE LAYOUT ─────────── */
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links > a:not(.btn) { font-size: 14px; color: var(--white); }
+    .nav-links > a:not(.btn):hover { color: var(--gold-light); }
+    .cred-text-subtle { font-size: 13px; color: var(--grey); }
+    .cred-byline { font-size: 12px; color: rgba(255,255,255,0.65); }
+    .availability-card { text-align: center; }
+    .availability-card h3 { font-family: var(--font-display); font-size: 32px; color: var(--gold); letter-spacing: .04em; margin: 10px 0 8px; }
+    .availability-card > p { font-size: 14px; color: var(--grey); margin: 0 auto 22px; line-height: 1.7; }
+    .availability-icon { font-size: 48px; color: var(--gold); }
+    .availability-card .pricing-features-list { margin-top: 24px; }
+    .availability-card .pricing-cancel { font-size: 12px; margin: 16px auto 0; }
+    @media (max-width: 900px) {
+      nav { position: relative; flex-wrap: wrap; gap: 16px; padding: 14px 20px; }
+      .nav-links { width: 100%; flex-wrap: wrap; gap: 12px 18px; }
+      .nav-links > a:not(.btn) { font-size: 12px; }
+      .nav-cta { padding: 10px 16px; font-size: 12px; }
+      .hero { padding-top: 48px; min-height: auto; padding-bottom: 64px; }
+    }
+    @media (max-width: 480px) {
+      .nav-links { gap: 10px 14px; }
+      .hero-buttons { width: 100%; }
+      .cred-text-subtle { font-size: 12px; }
+      .availability-card { padding: 36px 24px; }
+      .cta-banner { padding: 70px 18px; }
+    }
   </style>
 </head>
 <body>
-
   <!-- ─── NAV ──────────────────────────────────────── -->
- <nav>
-  <div class="nav-brand">
-    <span class="brand-main">TKD APP</span>
-    <span class="brand-sub">By Master Dutton</span>
-  </div>
-
-<div style="display:flex;align-items:center;gap:22px;">
-  <a href="/patterns/" style="font-size:14px;color:#FFFFFF;">
-    Patterns
-  </a>
-
-  <a href="/korean-terminology/" style="font-size:14px;color:#FFFFFF;">
-    Terminology
-  </a>
-
-  <a href="/grading-theory/" style="font-size:14px;color:#FFFFFF;">
-    Grading Theory
-  </a>
-
-  <a href="https://elitetkdscotland.wixsite.com/elitetkdnew/pricing-plans/plans-pricing" class="btn btn-gold nav-cta">
-    Start Free Trial
-  </a>
-</div>
-
-
+  <nav>
+    <a class="nav-brand" href="/" aria-label="TKD APP home">
+      <span class="brand-main">TKD APP</span>
+      <span class="brand-sub">by Master Dutton</span>
+    </a>
+    <div class="nav-links">
+      <a href="/patterns/">Patterns</a>
+      <a href="/korean-terminology/">Terminology</a>
+      <a href="/grading-theory/">Grading Theory</a>
+      <a href="https://play.google.com/store/apps" class="btn btn-gold nav-cta" data-play-store target="_blank" rel="noopener noreferrer">Google Play</a>
+    </div>
   </nav>
 
   <!-- ─── HERO ──────────────────────────────────────── -->
@@ -839,20 +844,12 @@
           <p class="hero-sub">
             Your growing ITF Taekwon-Do training companion. Explore pattern videos, quizzes, workouts and grading resources, with new lessons added regularly.
           </p>
-
           <div class="hero-buttons">
-            <a href="https://elitetkdscotland.wixsite.com/elitetkdnew/pricing-plans/plans-pricing" class="btn btn-gold">
-              Start 7-Day Free Trial
-            </a>
-            <a href="https://app.elitetkd.uk" class="btn btn-outline">
-              Open The App
-            </a>
+            <a href="https://play.google.com/store/apps" class="btn btn-gold" data-play-store target="_blank" rel="noopener noreferrer">Google Play Store</a>
+            <a href="#inside-the-app" class="btn btn-outline">Explore App Features</a>
           </div>
-
-          <p class="hero-pricing">
-            <span>£4.99/month</span> after your free trial. Cancel anytime.
-          </p>
-        </div>
+          <p class="hero-pricing"><span>Android app coming soon.</span> The direct Google Play listing link will be added when the app is publicly available.</p>
+</div>
 
         <!-- Phone mockup -->
         <div class="hero-visual">
@@ -877,47 +874,28 @@
       </div>
     </div>
   </section>
-
-
   <!-- ─── CREDIBILITY ───────────────────────────────── -->
   <div class="cred-band">
     <div class="container">
       <div class="cred-inner">
-        <div class="cred-badge">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
-        <p class="cred-text">
-          Built by <strong>Master Dutton, 7th Dan</strong><br>with over 30 years of Taekwon-Do experience.
-        </p>
+        <p class="cred-text cred-text-subtle">Developed with over 30 years of ITF Taekwon-Do teaching experience <span class="cred-byline">· by Master Dutton, 7th Dan</span></p>
         <div class="cred-divider"></div>
-        <div class="cred-stat">
-          <div class="cred-stat-number">24</div>
-          <div class="cred-stat-label">ITF Patterns</div>
-        </div>
+        <div class="cred-stat"><div class="cred-stat-number">ITF</div><div class="cred-stat-label">Patterns &amp; Training</div></div>
         <div class="cred-divider"></div>
-        <div class="cred-stat">
-          <div class="cred-stat-number">7th</div>
-          <div class="cred-stat-label">Dan Black Belt</div>
-        </div>
+        <div class="cred-stat"><div class="cred-stat-number">Theory</div><div class="cred-stat-label">Grading Resources</div></div>
         <div class="cred-divider"></div>
-        <div class="cred-stat">
-          <div class="cred-stat-number">30+</div>
-          <div class="cred-stat-label">Years Experience</div>
-        </div>
+        <div class="cred-stat"><div class="cred-stat-number">Quizzes</div><div class="cred-stat-label">Study &amp; Practice</div></div>
       </div>
     </div>
   </div>
 
-
   <!-- ─── INSIDE THE APP ─────────────────────────────── -->
-  <section class="app-preview">
+  <section class="app-preview" id="inside-the-app">
     <div class="container">
       <div class="app-preview-header">
         <span class="section-label">Inside The App</span>
         <h2>See Your Training<br><span class="gold">Come To Life</span></h2>
-        <p>Real screens from the TKD App — already featuring pattern videos, quizzes and workouts, with more ITF training content in development.</p>
+        <p>A look inside the TKD App: patterns, quizzes and workouts, with more ITF training content being added as it develops.</p>
       </div>
      <div class="preview-grid">
 
@@ -960,7 +938,7 @@
       <div class="features-header">
         <span class="section-label">What's Inside</span>
         <h2>Everything You Need<br>to <span class="gold">Train Properly</span></h2>
-        <p>From white belt to black belt — every resource, guide and tool in one place, built by someone who has lived Taekwon-Do for decades.</p>
+        <p>From white belt to black belt — a growing library of resources, guides and tools in one place.</p>
       </div>
 
       <div class="features-grid">
@@ -982,7 +960,7 @@
             </svg>
           </div>
           <h3>Theory &amp; Grading Guides</h3>
-          <p>Comprehensive theory content for every belt level. Know what you need before you step in front of the examiners.</p>
+          <p>Theory and grading guidance for learners at different belt levels. Know what you need before you step in front of the examiners.</p>
         </div>
 
         <div class="feature-card">
@@ -992,7 +970,7 @@
             </svg>
           </div>
           <h3>Korean Terminology</h3>
-          <p>Full glossary of Korean terms used in ITF Taekwon-Do. Learn the language of the art, not just the movements.</p>
+          <p>A handy glossary of Korean terms used in ITF Taekwon-Do. Learn the language of the art, not just the movements.</p>
         </div>
 
         <div class="feature-card">
@@ -1032,7 +1010,7 @@
             </svg>
           </div>
           <h3>Competition Preparation</h3>
-          <p>Everything you need to prepare for patterns and sparring competition — from rule knowledge to performance mindset.</p>
+          <p>Guidance to help prepare for patterns and sparring competition — from rule knowledge to performance mindset.</p>
         </div>
 
         <div class="feature-card">
@@ -1081,76 +1059,65 @@
       </div>
     </div>
   </section>
-
-
-  <!-- ─── PRICING ───────────────────────────────────── -->
-  <section class="pricing">
+  <!-- ─── GOOGLE PLAY AVAILABILITY ────────────────── -->
+  <section class="pricing" id="google-play">
     <div class="container">
-      <span class="section-label">Simple Pricing</span>
-      <h2>Try It Free. <span class="gold">Stay Because It Works.</span></h2>
-      <p class="pricing-intro">Join a growing ITF training platform. New patterns, lessons and features are being added regularly.</p>
-
-      <div class="pricing-card">
-        <div class="pricing-badge">Most Popular</div>
-        <div class="pricing-trial">FREE</div>
-        <div class="pricing-trial-label">7-Day Trial</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-amount">£4.99 <span>/ month</span></div>
-        <p class="pricing-note">after your free trial · new content added regularly</p>
-
+      <span class="section-label">Android App</span>
+      <h2>Keep Training. <span class="gold">Wherever You Are.</span></h2>
+      <p class="pricing-intro">ELITE TKD is preparing for public release on Google Play. Discover the training tools inside the app, with more content added over time.</p>
+      <div class="pricing-card availability-card">
+        <div class="availability-icon" aria-hidden="true">▶</div>
+        <h3>Coming to Google Play</h3>
+        <p>Patterns, techniques, theory, quizzes, workouts and grading support, all in one Android app.</p>
         <ul class="pricing-features-list">
-          <li>Growing ITF patterns library with video demonstrations</li>
-          <li>Full Korean terminology glossary</li>
-          <li>Theory and grading preparation for every belt</li>
-          <li>Interactive quizzes and self-testing</li>
-          <li>Flexibility, stretching and fitness content</li>
-          <li>Sparring support and competition prep</li>
-          <li>Instructor tools and class reference</li>
+          <li>Growing ITF patterns library</li>
+          <li>Theory, Korean terminology and grading resources</li>
+          <li>Interactive quizzes and training workouts</li>
+          <li>New lessons and improvements planned</li>
         </ul>
-
-        <a href="https://elitetkdscotland.wixsite.com/elitetkdnew/pricing-plans/plans-pricing" class="btn btn-gold">
-          Start 7-Day Free Trial
-        </a>
-        <p class="pricing-cancel">Cancel anytime. No commitment.</p>
+        <a href="https://play.google.com/store/apps" class="btn btn-gold" data-play-store target="_blank" rel="noopener noreferrer">Visit Google Play</a>
+        <p class="pricing-cancel">The direct download link and current subscription price will appear here after the Google Play listing becomes public.</p>
       </div>
     </div>
   </section>
-
-
-  <!-- ─── CTA BANNER ────────────────────────────────── -->
+  <!-- ─── CTA BANNER ─────────────────────────────────── -->
   <section class="cta-banner">
     <div class="container">
       <h2>Your Training.<br><span class="gold">Upgraded.</span></h2>
-      <p>Join students and instructors training smarter with TKD APP.</p>
+      <p>Prepare for your next grading, explore the patterns library and train at your own pace.</p>
       <div class="cta-buttons">
-        <a href="https://elitetkdscotland.wixsite.com/elitetkdnew/pricing-plans/plans-pricing" class="btn btn-gold">
-          Start 7-Day Free Trial
-        </a>
-        <a href="https://app.elitetkd.uk" class="btn btn-outline">
-          Open The App
-        </a>
+        <a href="https://play.google.com/store/apps" class="btn btn-gold" data-play-store target="_blank" rel="noopener noreferrer">Google Play Store</a>
+        <a href="/patterns/" class="btn btn-outline">Explore Patterns</a>
       </div>
     </div>
   </section>
-
-
   <!-- ─── FOOTER ────────────────────────────────────── -->
   <footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="brand-main">TKD APP</div>
-          <div class="brand-sub">By Master Dutton</div>
+          <div class="brand-sub">by Master Dutton</div>
         </div>
         <div class="footer-links">
-          <a href="https://app.elitetkd.uk">Open App</a>
-          <a href="https://elitetkdscotland.wixsite.com/elitetkdnew/pricing-plans/plans-pricing">Start Free Trial</a>
-          <a href="https://elitetkd.uk">Elite TKD School</a>
+          <a href="/patterns/">Patterns</a>
+          <a href="/korean-terminology/">Korean Terminology</a>
+          <a href="/grading-theory/">Grading Theory</a>
+          <a href="https://play.google.com/store/apps" data-play-store target="_blank" rel="noopener noreferrer">Google Play</a>
         </div>
       </div>
-      <p class="footer-copy">© 2026 TKD APP by Master Dutton. All rights reserved. &nbsp;|&nbsp; tkdapp.uk</p>
+      <p class="footer-copy">© 2026 TKD APP. All rights reserved. &nbsp;|&nbsp; tkdapp.uk &nbsp;·&nbsp; Created by Master Dutton</p>
     </div>
   </footer>
 
+  <script>
+    // After the app is publicly listed, replace this with your actual Google Play
+    // listing URL (https://play.google.com/store/apps/details?id=YOUR_APP_ID).
+    // For now, this goes to the official Google Play storefront—not an invented listing.
+    const GOOGLE_PLAY_APP_URL = 'https://play.google.com/store/apps';
+    document.querySelectorAll('[data-play-store]').forEach(link => {
+      link.href = GOOGLE_PLAY_APP_URL;
+    });
+  </script>
 </body>
 </html>
